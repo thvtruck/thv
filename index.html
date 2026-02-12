@@ -4,59 +4,123 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KKV Truck Tracking</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
+    /* เขียน CSS ทั้งหมดตรงนี้ */
     body {
-      background: linear-gradient(to bottom right, #0d6efd, #00bcd4);
-      color: white;
-      height: 100vh;
+      background: #f0f2f5; /* สีพื้นหลังโทนสว่าง สบายตา */
+      font-family: 'Prompt', sans-serif; /* ใช้ฟอนต์ Google ที่เรียกมา */
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      margin: 0;
     }
+
+    .container {
+      padding: 20px;
+    }
+
     .card {
-      background: rgba(255, 255, 255, 0.1);
+      background: #ffffff;
       border: none;
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      border-radius: 25px;
+      padding: 40px 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       max-width: 400px;
+      width: 100%;
+      margin: auto;
     }
+
+    .truck-icon {
+      font-size: 60px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
     h1 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #1a237e; /* สีน้ำเงินเข้มดูน่าเชื่อถือ */
+      margin-bottom: 15px;
     }
+
     p {
+      color: #555;
+      font-weight: 300;
       font-size: 1rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 25px;
     }
-    .small-text {
-      font-size: 0.9rem;
-      opacity: 0.9;
+
+    /* ตกแต่งปุ่มให้กดง่ายบนมือถือ */
+    .btn-login {
+      background-color: #1a237e;
+      color: white;
+      padding: 16px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 15px;
+      text-decoration: none;
+      display: block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(26, 35, 126, 0.2);
     }
-    .btn-custom {
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      border-radius: 0.5rem;
+
+    .btn-login:hover {
+      background-color: #0d47a1;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* แถบข้อความความปลอดภัย */
+    .safety-note {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      margin-top: 30px;
+      font-weight: 400;
+    }
+
+    .help-text {
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 20px;
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🚚 ระบบติดตามรถขนส่ง KKV </h1>
-    <p>กรุณากดปุ่มด้านล่างเพื่อเข้าสู่ระบบติดตาม</p>
-    
-    <!-- ข้อความให้กำลังใจ -->
-    <p class="small-text mt-2">🚦 ขอให้ขับขี่ปลอดภัย เดินทางโดยสวัสดิภาพครับ</p>
-    
-    <!-- ปุ่มไปยังระบบ -->
-    <a href="https://script.google.com/macros/s/AKfycbzEgFfxnZtJn_wGXAC9z1D_pmE-75OifMXAoEBLUMVkb1lkzIuVtN9LB7qTqJIKrV0Xdg/exec" class="btn btn-light btn-custom">เข้าสู่ระบบ</a>
-    
-    <!-- ข้อความสำรอง -->
-    <p class="small-text mt-3">หากไม่สามารถเข้าหน้าได้ ให้ลองรีเฟรชหรือใช้เบราว์เซอร์อื่น</p>
+
+  <div class="container">
+    <div class="card text-center">
+      <span class="truck-icon">🚚</span>
+      <h1>ระบบติดตามรถ KKV</h1>
+      
+      <p>ยินดีต้อนรับสู่ระบบติดตาม<br>เพื่อความปลอดภัยในการขนส่ง</p>
+
+      <a href="https://script.google.com/macros/s/AKfycbzEgFfxnZtJn_wGXAC9z1D_pmE-75OifMXAoEBLUMVkb1lkzIuVtN9LB7qTqJIKrV0Xdg/exec" 
+         class="btn-login">
+        เข้าสู่ระบบติดตาม
+      </a>
+
+      <div class="safety-note">
+        🚦 ขอให้ขับขี่ปลอดภัย เดินทางโดยสวัสดิภาพ
+      </div>
+
+      <p class="help-text">
+        หากไม่สามารถเข้าใช้งานได้ กรุณาลองรีเฟรชหน้าจอ<br>
+        หรือตรวจสอบสัญญาณอินเทอร์เน็ตของท่าน
+      </p>
+    </div>
   </div>
+
 </body>
 </html>
